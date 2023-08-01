@@ -10,14 +10,14 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final ViewModel controller = Get.find();
+    final ViewModel viewModel = Get.find();
     
     return Scaffold(
       appBar: AppBar(title: const Text("GetX"),),
       
-      body: Center(child: Obx(() => Text('Counter: ${controller.count}'))),
+      body: Center(child: Obx(() => Text('Counter: ${viewModel.count}'))),
 
-      floatingActionButton: FloatingActionButton(onPressed: () => controller.increment(),
+      floatingActionButton: FloatingActionButton(onPressed: () => viewModel.increment(),
       child: const Icon(Icons.add),),
     );
   }

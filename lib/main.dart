@@ -5,8 +5,5 @@ import 'package:get/get.dart';
 import 'app/app.dart';
 
 void main()  {
-  //Using get for Di
-  DiContainer.setUpDi();
-
-  return runApp(const GetMaterialApp(home: MyApp(),));
+  return runApp(GetMaterialApp(home: const MyApp(), initialBinding: DiContainer(),));
 }
